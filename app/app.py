@@ -85,10 +85,10 @@ def api_browse() -> str:
     resp = Response(json_result, status=200, mimetype='application/json')
     return resp
 
-@app.route('/api/v1/grades/<int:grades_id>', methods=['GET'])
-def api_retrieve(grades_id) -> str:
+@app.route('/api/v1/grades/<int:grade_id>', methods=['GET'])
+def api_retrieve(grade_id) -> str:
     cursor = mysql.get_db().cursor()
-    cursor.execute('SELECT * FROM grades WHERE id=%s', grades_id)
+    cursor.execute('SELECT * FROM grades WHERE id=%s', grade_id)
     result = cursor.fetchall()
     json_result = json.dumps(result);
     resp = Response(json_result, status=200, mimetype='application/json')
@@ -98,7 +98,7 @@ def api_retrieve(grades_id) -> str:
 def api_edit(grades_id) -> str:
     cursor = mysql.get_db().cursor()
     content = request.json
-    inputData = (content['Lname'], content['Fname'], content['ssn'],
+    inputData = (content['Last_name'], content['First_name'], content['SSN'],
                  content['Test1'], content['Test2'],
                  content['Test3'], content['Test4'],content['Final'], content['Grade'],grades_id)
     sql_update_query = """UPDATE grades t SET t.Last_name = %s, t.First_name = %s, t.SSN = %s, t.Test1 = 
@@ -114,7 +114,7 @@ def api_add() -> str:
     content = request.json
 
     cursor = mysql.get_db().cursor()
-    inputData = (content['Lname'], content['Fname'], content['ssn'],
+    inputData = (content['Last_name'], content['First_name'], content['SSN'],
                  content['Test1'], content['Test2'],
                  content['Test3'], content['Test4'], content['Final'], content['Grade'])
     sql_insert_query = """INSERT INTO grades (Last_name,First_name,SSN,Test1,Test2,Test3,Test4,Final,Grade) VALUES (%s, %s,%s, %s,%s, %s,%s,%s,%s) """
