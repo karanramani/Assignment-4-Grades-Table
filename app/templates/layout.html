@@ -16,20 +16,22 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
-{% if user %}
+    <p class="page-heading" style="text-align: center;padding: 20px;font-size: 40px;">
+    {% if user %}
     <title>Welcome to {{ user.username }}'s site</title>
     {% else %}
     <title>Welcome to My Site!</title>
     {% endif %}
+
+    <a href="/"  style="font-size: 22px;background: white;font-weight: bold;text-decoration: none;padding: 21px;color: black;border-radius: 15px;">{% if user %}{{ user.username }}'s Homepage{% else %}
+    <title>Welcome to My Homepage</title>
+    {% endif %}</a>
+        <title>Welcome to My Homepage</title>
+</p>
 <head>
  <body class="bg-image-custom">
 <!-- As a heading -->
-<p style="text-align: center;padding: 20px;font-size: 40px;">
-  <a href="/"  style="font-size: 22px;background: white;font-weight: bold;text-decoration: none;padding: 21px;color: black;border-radius: 15px;">{% if user %}{{ user.username }}'s Homepage{% else %}
-    <title>Welcome to My Homepage</title>
-    {% endif %}</a>
-</p>
+
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
