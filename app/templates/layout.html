@@ -1,28 +1,37 @@
 <!doctype html>
 <html lang="en">
+<style>
+    .bg-image-custom{
+        background-color: #41B3A3;
+        background-size: cover;
+        height: 100%;
+        position: relative;
+        font-family: sathu !important;
+    }
+</style>
 <head>
 
     <!-- Required meta tags -->
     <!-- Bootstrap CSS -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 {% if user %}
     <title>Welcome to {{ user.username }}'s site</title>
     {% else %}
     <title>Welcome to My Site!</title>
     {% endif %}
 <head>
- <body>
+ <body class="bg-image-custom">
 <!-- As a heading -->
 <p style="text-align: center;padding: 20px;font-size: 40px;">
-  <a href="/"  style="font-size: 22px;background: white;font-weight: bold;padding: 50px;border-radius: 15px;">{% if user %}{{ user.username }}'s Homepage{% else %}
+  <a href="/"  style="font-size: 22px;background: white;font-weight: bold;text-decoration: none;padding: 21px;color: black;border-radius: 15px;">{% if user %}{{ user.username }}'s Homepage{% else %}
     <title>Welcome to My Homepage</title>
     {% endif %}</a>
 </p>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-1">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
   <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
     <span class="navbar-toggler-icon"></span>
