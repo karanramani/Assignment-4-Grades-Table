@@ -16,13 +16,14 @@
 <head>
  <body>
 <!-- As a heading -->
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-1">
-  <a class="navbar-brand" href="/"  style=" width: 20%; border: 1px solid; text-align: center; background: white; font-size: 22px;
-    font-weight: bold;">{% if user %}{{ user.username }}'s Homepage{% else %}
+<p style="text-align: center;padding: 20px;font-size: 40px;">
+  <a href="/"  style="font-size: 22px;background: white;font-weight: bold;padding: 50px;border-radius: 15px;">{% if user %}{{ user.username }}'s Homepage{% else %}
     <title>Welcome to My Homepage</title>
     {% endif %}</a>
+</p>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-1">
+
   <button aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarNavDropdown" data-toggle="collapse" type="button">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,10 +33,10 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="/cities/new">New Entries<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/grades/new">New Entries<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="api/cities">Grades API JSON endpoint <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="api/v1/grades">Grades API JSON endpoint <span class="sr-only">(current)</span></a>
       </li>
 
     </ul>
