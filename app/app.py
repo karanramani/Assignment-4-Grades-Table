@@ -32,6 +32,12 @@ def record_view(grades_id):
     result = cursor.fetchall()
     return render_template('view.html', title='View Form', grades=result[0])
 
+@app.route('/edit/<int:grades_id>', methods=['GET'])
+def form_edit_get(grades_id):
+    cursor = mysql.get_db().cursor()
+    cursor.execute('SELECT * FROM grades WHERE id=%s', grades_id)
+    result = cursor.fetchall()
+    return render_template('edit.html', title='Edit Form', grades=result[0])
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

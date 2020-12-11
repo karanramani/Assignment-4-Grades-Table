@@ -1,45 +1,52 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/edit/{{city.id}}" method="post">
-    <div class="row">
+<form action="/edit/{{grades.id}}" method="post">
+    <div class="column">
         <div class="col">
-            <label for="fldName">City Name</label>
-            <input id="fldName" type="text" class="form-control" placeholder="City Name" name="fldName" value="{{city.fldName}}">
+            <label for="Lname">Last Name</label>
+            <input id="Lname" type="text" class="form-control" placeholder="Last Name" name="Lname" value="{{grades.Last_name}}">
         </div>
         <div class="col">
-            <label for="fldAbbreviation">City Abbreviation</label>
-            <input id="fldAbbreviation" type="text" class="form-control" placeholder="City Abbreviation"
-                   name="fldAbbreviation" value="{{city.fldAbbreviation}}">
+            <label for="Fname">First Name</label>
+            <input id="Fname" type="text" class="form-control" placeholder="First Name"
+                   name="Fname" value="{{grades.First_name}}">
         </div>
         <div class="col">
-            <label for="fldCountry">City Country</label>
-            <input id="fldCountry" type="text" class="form-control" placeholder="City Country" name="fldCountry" value="{{city.fldCountry}}">
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <label for="fldLat">City Latitude</label>
-            <input id="fldLat" type="text" class="form-control" placeholder="City Latitude" name="fldLat" value="{{city.fldLat}}">
+            <label for="ssn">SSN</label>
+            <input id="ssn" type="text" class="form-control" placeholder="SSN"
+                   name="ssn" value="{{grades.SSN}}">
         </div>
         <div class="col">
-            <label for="fldlong">City Longitude</label>
-            <input id="fldlong" type="text" class="form-control" placeholder="City Longitude" name="fldLong" value="{{city.fldLong}}">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <label for="fldCapitalStatus">Capital Status</label>
-
-            <input id="fldCapitalStatus" type="text" class="form-control" placeholder="Capital Status"
-                   name="fldCapitalStatus" value="{{city.fldCapitalStatus}}">
+            <label for="Test1">Test 1</label>
+            <input id="Test1" type="text" class="form-control" placeholder="Test 1"
+                   name="Test1" value="{{grades.Test1}}">
         </div>
         <div class="col">
-            <label for="fldPopulation">City Population</label>
-            <input id="fldPopulation" type="text" class="form-control" placeholder="Population" name="fldPopulation" value="{{city.fldPopulation}}">
+            <label for="Test2">Test 2</label>
+            <input id="Test2" type="text" class="form-control" placeholder="Test 2"
+                   name="Test2" value="{{grades.Test2}}">
         </div>
-    </div>
-    <button type="submit" class="btn btn-success">Save</button>
+        <div class="col">
+            <label for="Test3">Test 3</label>
+            <input id="Test3" type="text" class="form-control" placeholder="Test 3"
+                   name="Test3" value="{{grades.Test3}}">
+        </div>
+        <div class="col">
+            <label for="Test4">Test 4</label>
+            <input id="Test4" type="text" class="form-control" placeholder="Test 4"
+                   name="Test4" value="{{grades.Test4}}">
+        </div>
+        <div class="col">
+            <label for="Final">Final</label>
+            <input id="Final" type="text" class="form-control" placeholder="Final"
+                   name="Final" value="{{grades.Final}}">
+        </div>
+        <div class="col">
+            <label for="Grade">Grade</label>
+            <input id="Grade" type="text" class="form-control" placeholder="Grade"
+                   name="Grade" value="{{grades.Grade}}">
+        </div>
+    <button type="submit" class="btn btn-success" style="margin-top: 10%;margin-left: 50%;padding: 20px;font-size: 20px;">Save</button>
 
 </form>
 {% endblock %}
