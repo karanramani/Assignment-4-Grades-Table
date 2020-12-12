@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<form action="/grades/new" method="POST">
+<form action="/edit/{{grades.id}}" method="POST">
     <div class="column" style="margin-top: 5%; background: white; padding: 5%; border-radius: 35px;">
         <div class="col" style="padding-bottom: 20px;">
             <label for="Lname">Last Name</label>
